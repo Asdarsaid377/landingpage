@@ -4,6 +4,7 @@ import { MdOutlineDescription } from "react-icons/md";
 import { AiFillCloseCircle, AiOutlineBgColors, AiOutlineFileProtect } from "react-icons/ai";
 import { ImClipboard } from "react-icons/im";
 import axios from "axios";
+import Link from "next/link";
 
 const DetailProduk = () => {
   const [deskripsi, setDeskripsi] = useState("Deskripsi");
@@ -34,7 +35,7 @@ const DetailProduk = () => {
   return <div>
     <div className="mx-[100px]">
       <div className="text-primary">
-        <a href="/" className="hover:font-bold text-primary">Beranda/</a><a href="/list_produk" className="hover:font-bold">List Folding Gate/</a><span className="font-bold text-primary">Detail Produk</span>
+        <Link href="/" className="hover:font-bold text-primary">Beranda/</Link><Link href="/list_produk" className="hover:font-bold">List Folding Gate/</Link><span className="font-bold text-primary">Detail Produk</span>
       </div>
       <div className="mt-9">
         <span className="text-[40px] text-black font-bold mt-9">{name}</span>

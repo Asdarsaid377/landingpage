@@ -26,7 +26,7 @@ const Header = () => {
     <nav className="w-full flex-1 flex h-[100px] items-center justify-between navbar">
       <div className="flex ml-16 items-center justify-center">
         <Image width={124} height={90} src={logo} alt="Logo Bunka" />
-        <a href="/" className="cursor-pointer font-bold text-sm md:text-xl">{name}</a>
+        <Link href="/" className="cursor-pointer font-bold text-sm md:text-xl">{name}</Link>
       </div>
       {/* Menu Desktop */}
       <ul className="list-none items-center gap-6 ml-16 text-center justify-center cursor-pointer flex">
