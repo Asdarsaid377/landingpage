@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import CardList from "../card/CardList";
 import Link from "next/link";
 
 const ListProduk = () => {
-
-
   return <>
     <div className="mx-[100px]">
       <div className="text-primary">
