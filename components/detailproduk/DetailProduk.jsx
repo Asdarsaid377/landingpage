@@ -50,7 +50,7 @@ const DetailProduk = () => {
               {/* Deskripsi */}
               <li className="flex justify-start transition-opacity duration-200 delay-200 ease-linear items-center gap-4 mt-5 cursor-pointer"
                 onClick={() => setDeskripsi("Deskripsi")}>
-                <a href="#" className="text-primary text-[22px]" ><MdOutlineDescription /></a>
+                <a className="text-primary text-[22px]" ><MdOutlineDescription /></a>
                 <span className="font-bold text-[15px] transition-all duration-500">Deskripsi</span>
               </li>
               {
@@ -63,7 +63,7 @@ const DetailProduk = () => {
               <li className="flex justify-start cursor-pointer mt-5 items-center gap-4 "
                 onClick={() => setDeskripsi("Spesifikasi")}
               >
-                <a href="#" className="text-primary text-[22px]" ><ImClipboard /></a>
+                <a className="text-primary text-[22px]" ><ImClipboard /></a>
                 <span className="font-bold text-[15px]">Spesifikasi</span>
               </li>
               {
@@ -76,7 +76,7 @@ const DetailProduk = () => {
               <li className="flex justify-start cursor-pointer mt-5 items-center gap-4 "
                 onClick={() => setDeskripsi("Pilihan")}
               >
-                <a href="#" className="text-primary text-[22px]" ><AiOutlineBgColors /></a>
+                <a className="text-primary text-[22px]"><AiOutlineBgColors /></a>
                 <span className="font-bold text-[15px]">Pilihan Warna</span>
               </li>
               {
@@ -89,7 +89,7 @@ const DetailProduk = () => {
               <li className="flex justify-start cursor-pointer mt-5 items-center gap-4 "
                 onClick={() => setDeskripsi("Sektor")}
               >
-                <a href="#" className="text-primary text-[22px]" ><AiOutlineFileProtect /></a>
+                <a className="text-primary text-[22px]" ><AiOutlineFileProtect /></a>
                 <span className="font-bold text-[15px]">Sektor Yang Menggunakan Produk Ini</span>
               </li>
               {

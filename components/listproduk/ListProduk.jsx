@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import CardList from "../card/CardList";
-import Contact from "../contact/Contact";
-import Footer from "../footer/Footer";
-import Image from "next/image";
+import Link from "next/link";
 
 const ListProduk = () => {
 
@@ -10,7 +8,8 @@ const ListProduk = () => {
   return <>
     <div className="mx-[100px]">
       <div className="text-primary">
-        <a href="/" className="text-primary">Beranda/</a> <span className="font-bold text-primary">List Folding Gate</span>
+        <Link href="/" className="text-primary">Beranda</Link>/
+        <a className="font-bold text-primary">List Folding Gate</a>
       </div>
       <div className="mt-9">
         <span className="text-[40px] text-black font-bold mt-9">Semua Produk Folding Gate</span>

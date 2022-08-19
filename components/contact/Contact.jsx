@@ -53,19 +53,12 @@ const Contact = ({ names }) => {
         <span className="text-white">Link</span>
         <ul className="w-auto mt-5">
           <li className="flex-col gap-5 flex">
-            <a href="" className="hover:cursor-pointer text-white p-2" >Beranda</a>
-            <a href="" className="hover:cursor-pointer text-white p-2">Tentang</a>
-            <a href="" className="hover:cursor-pointer text-white p-2">Produk</a>
-            <a href="" className="hover:cursor-pointer text-white p-2">Tokopedia</a>
+            <a className="hover:cursor-pointer text-white p-2" >Beranda</a>
+            <a className="hover:cursor-pointer text-white p-2">Tentang</a>
+            <a className="hover:cursor-pointer text-white p-2">Produk</a>
+            <a className="hover:cursor-pointer text-white p-2">Tokopedia</a>
           </li>
-          {/* {
-            dataNavbar.map((item, index) => (
-              <li key={item.id} className="flex flex-1 flex-col gap-5" >
-                <a href="/" className="hover:cursor-pointer text-white p-2">{item.title}</a>
-              </li>
-            ))
-          }
-          <a href="#tokopedia" className="hover:cursor-pointer text-white p-2">Tokopedia</a> */}
+
         </ul>
       </div>
       <div className="maps flex justify-center w-[90%] items-center text-white mr-20">

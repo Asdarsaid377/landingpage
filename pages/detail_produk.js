@@ -8,12 +8,12 @@ import Whatsapp from "../components/wa/Whatsapp";
 const detail_produk = () => {
   return <div>
     <div className="bg-gray-100 h-[100%]">
-      <div className="sticky top-0 z-50 bg-white w-full">
+      <div className="sticky top-0 z-40 bg-white w-full">
         <Header />
       </div>
       <div className="mt-10">
         <DetailProduk />
-        <div className="mt-20 z-50 static">
+        <div className="mt-20 z-50 -mt[400px] sticky top-[620px]">
           <Whatsapp />
         </div>
       </div>

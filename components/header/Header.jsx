@@ -5,6 +5,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import Image from 'next/image';
 import toko from "./toko.png"
 import axios from "axios";
+import Link from "next/link"
 
 
 const Header = () => {
@@ -35,7 +36,7 @@ const Header = () => {
               className={`text-[20px] font-bold text-red-600 ${active === nav.title ? "text-red-600" : "text-black"} gap-5`}
               onClick={() => setActive(nav.title)}
             >
-              <a id={`#${nav.id}`} >{nav.title}</a>
+              <Link href="/" id={`#${nav.id}`} >{nav.title}</Link>
               {
                 active === nav.title && <div className="h-1 w-full bg-red-600"></div>
               }

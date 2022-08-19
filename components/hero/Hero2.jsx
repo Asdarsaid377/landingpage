@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
       <div className="flex justify-center mt-20 gap-12 my-10 mx-32 items-center">
         <div className="image w-[30%] h-[537px] relative">
-          <Image src={woman} priority layout="fill" />
+          <Image src={woman} priority layout="fill" alt="gambar" />
         </div>
         <div className="content w-[70%] text-left" >
           <div className="text-primary font-bold text-[40px] mb-6">Tentang Kami</div>
@@ -50,18 +50,17 @@ const Hero = () => {
             <p>Kami tidak hanya membuat dan menjual <br /> produk tapi lebih dari itu.</p>
           </div>
           <div className="w-56 h-32 rounded-2xl text-center items-center flex-col flex justify-center ">
-            <Image src={service} alt="" className="w-20 h-20" />
+            <Image src={service} alt="gambar" className="w-20 h-20" />
             <span className="text-[20px] font-bold">Kualitas Produk Terbaik</span>
           </div>
           <div className="w-56 h-32 rounded-2xl text-center items-center flex-col flex justify-center ">
-            <Image src={service} alt="" className="w-20 h-20" />
+            <Image src={service} alt="gambar" className="w-20 h-20" />
             <span className="text-[20px] font-bold">Perakitan Cepat</span>
           </div>
           <div className="w-56 h-32 rounded-2xl text-center items-center flex-col flex justify-center ">
-            <Image src={service} alt="" className="w-20 h-20" />
+            <Image src={service} alt="gambar" className="w-20 h-20" />
             <span className="text-[20px] font-bold">Layanan Terbaik</span>
           </div>
-
         </div>
       </div>
       <div className="w-[550px] opacity-75 z-0  absolute top-[200px] left-[-200px] ">

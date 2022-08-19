@@ -13,7 +13,9 @@ const list_produk = () => {
       </div>
       <div className="mt-10">
         <ListProduk />
-        <Whatsapp />
+        <div className="mt-20 z-50 -mt[400px] sticky top-[620px]">
+          <Whatsapp />
+        </div>
       </div>
       <div className="mt-32">
         <Contact />
