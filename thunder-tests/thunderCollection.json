@@ -1,0 +1,100 @@
+[
+  {
+    "_id": "b77c84da-2a49-46b3-a3bf-a3f4f59e01d2",
+    "colName": "Auth",
+    "created": "2022-08-07T02:55:04.848Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
+    "colName": "Service client",
+    "created": "2022-08-07T02:55:12.696Z",
+    "sortNum": 20000,
+    "folders": []
+  },
+  {
+    "_id": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "colName": "Service admin",
+    "created": "2022-08-07T02:55:19.411Z",
+    "sortNum": 30000,
+    "folders": [
+      {
+        "_id": "63677e07-8392-4319-8078-91de973d1203",
+        "name": "User",
+        "containerId": "",
+        "created": "2022-08-07T02:55:31.001Z",
+        "sortNum": 10000,
+        "settings": {
+          "headers": [],
+          "tests": []
+        }
+      },
+      {
+        "_id": "9a73fcc3-c5fb-4dab-8557-62e56c8f6df6",
+        "name": "header",
+        "containerId": "",
+        "created": "2022-08-07T03:10:31.209Z",
+        "sortNum": 20000
+      },
+      {
+        "_id": "10826ad9-0f77-455b-b5d6-ece68250128a",
+        "name": "banner top",
+        "containerId": "",
+        "created": "2022-08-08T02:59:49.267Z",
+        "sortNum": 40000
+      },
+      {
+        "_id": "e54a306e-9e09-4343-8550-b24c51153987",
+        "name": "about us",
+        "containerId": "",
+        "created": "2022-08-08T03:16:19.797Z",
+        "sortNum": 50000
+      },
+      {
+        "_id": "768f13a6-8f19-4457-9ce4-d5e3a22fff1d",
+        "name": "category product",
+        "containerId": "",
+        "created": "2022-08-08T03:30:50.131Z",
+        "sortNum": 60000
+      },
+      {
+        "_id": "8f0c46aa-69e8-4315-b173-e095f800a177",
+        "name": "product",
+        "containerId": "",
+        "created": "2022-08-09T10:57:48.653Z",
+        "sortNum": 70000
+      },
+      {
+        "_id": "f761f567-829f-4671-acfb-990ca7a2114b",
+        "name": "testimoni",
+        "containerId": "",
+        "created": "2022-08-09T12:42:57.825Z",
+        "sortNum": 80000
+      },
+      {
+        "_id": "c6a35bb5-afae-4519-a893-1b0b69d2e27b",
+        "name": "contact us",
+        "containerId": "",
+        "created": "2022-08-09T13:20:18.377Z",
+        "sortNum": 100000
+      },
+      {
+        "_id": "79c03157-9151-482e-b97a-f14bf1bc0d29",
+        "name": "galery",
+        "containerId": "",
+        "created": "2022-08-09T14:04:19.241Z",
+        "sortNum": 110000
+      }
+    ],
+    "settings": {
+      "headers": [
+        {
+          "name": "x-access-token",
+          "value": "{{token}}"
+        }
+      ],
+      "tests": []
+    }
+  }
+]

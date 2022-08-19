@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_31" data-name="Rectangle 31" width="24" height="24" transform="translate(988 317)" fill="#af0a04" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="material" transform="translate(-988 -317)" clip-path="url(#clip-path)">
+    <g id="__TEMP__SVG__" transform="translate(986.286 315.286)">
+      <path id="Path_18" data-name="Path 18" d="M24,17.143H22.286v1.714H24V24H3.429V18.857H12V17.143H3.429a1.716,1.716,0,0,0-1.714,1.714V24a1.716,1.716,0,0,0,1.714,1.714H24A1.716,1.716,0,0,0,25.714,24V18.857A1.716,1.716,0,0,0,24,17.143Z" fill="#af0a04"/>
+      <path id="Path_19" data-name="Path 19" d="M6.857,21.429A.857.857,0,1,1,6,20.571.857.857,0,0,1,6.857,21.429Z" fill="#af0a04"/>
+      <path id="Path_20" data-name="Path 20" d="M25.714,6.857H18.857V12H13.714v6.857h6.857V13.714h5.143ZM18.857,17.143H15.429V13.714h3.429ZM24,12H20.571V8.571H24Z" fill="#af0a04"/>
+      <path id="Path_21" data-name="Path 21" d="M15.429,8.571H8.571V1.714h6.857ZM10.286,6.857h3.429V3.429H10.286Z" fill="#af0a04"/>
+    </g>
+  </g>
+</svg>

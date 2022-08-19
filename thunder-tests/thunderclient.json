@@ -1,0 +1,952 @@
+[
+  {
+    "_id": "f333034f-a2aa-4abd-a40e-2686fa0d4ad5",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "63677e07-8392-4319-8078-91de973d1203",
+    "name": "get all user",
+    "url": "{{base_url}}/service/admin/user",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-07T02:55:44.428Z",
+    "modified": "2022-08-07T03:33:42.887Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<",
+        "value": "100"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "contains",
+        "value": "application/json"
+      }
+    ]
+  },
+  {
+    "_id": "f9b2b267-c318-478f-a4c8-18e691e5c3b7",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "63677e07-8392-4319-8078-91de973d1203",
+    "name": "delete user",
+    "url": "{{base_url}}/service/admin/user/62ef3221dff58c1893bdc70e",
+    "method": "DELETE",
+    "sortNum": 20000,
+    "created": "2022-08-07T02:56:58.549Z",
+    "modified": "2022-08-07T03:34:31.847Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e0ed63a2-edaa-4102-bdb4-17a2273c4a7a",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "63677e07-8392-4319-8078-91de973d1203",
+    "name": "update user",
+    "url": "{{base_url}}/service/admin/user/62f5034ca84529dafc818e8a",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2022-08-07T02:57:45.359Z",
+    "modified": "2022-08-11T13:28:42.590Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "{{token}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\t\"name\" : \"-\",\n\t\"email\" : \"exsan172@gmail.com\",\n\t\"role\" : \"admin\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ce6a655a-5cbb-47e8-9cf5-77675a9dcbb3",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "63677e07-8392-4319-8078-91de973d1203",
+    "name": "create user",
+    "url": "{{base_url}}/service/admin/user",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-08-07T02:58:34.112Z",
+    "modified": "2022-08-11T13:32:48.097Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "{{token}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\t\"name\" : \"admin\",\n\t\"email\" : \"exsan1772@gmail.com\",\n\t\"password\" : \"12345678pwd\",\n\t\"role\" : \"admin\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0363c036-15b1-4bbd-9536-6df599e92482",
+    "colId": "b77c84da-2a49-46b3-a3bf-a3f4f59e01d2",
+    "containerId": "",
+    "name": "login",
+    "url": "{{base_url}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-08-07T03:00:02.040Z",
+    "modified": "2022-08-11T13:46:19.773Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "email",
+          "value": "owner@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "12345678pwd"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.token",
+        "action": "setto",
+        "value": "{{token}}"
+      }
+    ]
+  },
+  {
+    "_id": "99f9382f-e977-4f72-8165-513bd63ae81a",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "9a73fcc3-c5fb-4dab-8557-62e56c8f6df6",
+    "name": "create header",
+    "url": "{{base_url}}/service/admin/header",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2022-08-07T03:11:22.263Z",
+    "modified": "2022-08-11T03:36:58.800Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "tokopediaUrl",
+          "value": "https://tokopedia.com"
+        },
+        {
+          "name": "whatsappUrl",
+          "value": "https://whatsapp.com"
+        },
+        {
+          "name": "name",
+          "value": "PT Bunka Karya"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../../Downloads/favicon.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "42634964-46cc-4331-91ca-23104c69f823",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "9a73fcc3-c5fb-4dab-8557-62e56c8f6df6",
+    "name": "get header",
+    "url": "{{base_url}}/service/admin/header",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-08-07T03:43:34.509Z",
+    "modified": "2022-08-07T03:55:56.790Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2bef8686-66dc-4df3-b7bd-66185c3840df",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "9a73fcc3-c5fb-4dab-8557-62e56c8f6df6",
+    "name": "delete header",
+    "url": "{{base_url}}/service/admin/header/62f478174d85e3ab37dca007",
+    "method": "DELETE",
+    "sortNum": 80000,
+    "created": "2022-08-07T03:43:45.884Z",
+    "modified": "2022-08-11T03:31:57.202Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "9cc40d06-dcd4-4d7d-a40c-49852dd83f4e",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "9a73fcc3-c5fb-4dab-8557-62e56c8f6df6",
+    "name": "update header",
+    "url": "{{base_url}}/service/admin/header/62f4765d52f37e7e8007786b",
+    "method": "PUT",
+    "sortNum": 90000,
+    "created": "2022-08-07T03:44:02.189Z",
+    "modified": "2022-08-11T03:24:27.524Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "tokopediaUrl",
+          "value": "https://tokopedias.com"
+        },
+        {
+          "name": "whatsappUrl",
+          "value": "https://whatsapp.com"
+        },
+        {
+          "name": "name",
+          "value": "PT AZ solusindo"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 09.37.26.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "e3a12fda-7c5b-467e-86a3-26b7d9b013c1",
+    "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
+    "containerId": "",
+    "name": "get header",
+    "url": "{{base_url}}/service/client/header",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-07T15:32:23.370Z",
+    "modified": "2022-08-10T09:23:37.266Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "aac20888-0809-4e45-9bc4-34a4b93d4f79",
+    "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
+    "containerId": "",
+    "name": "get landing pages",
+    "url": "{{base_url}}/service/client/landing-pages",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-08-07T15:32:41.254Z",
+    "modified": "2022-08-10T09:23:42.279Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "11b13e21-4ba7-4706-8b43-414f9497e738",
+    "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
+    "containerId": "",
+    "name": "get contact us",
+    "url": "{{base_url}}/service/client/contact-us",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-08-07T15:32:58.275Z",
+    "modified": "2022-08-10T09:23:52.646Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a214eb65-9030-4c4d-b32f-dbb5cce92064",
+    "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
+    "containerId": "",
+    "name": "get list product",
+    "url": "{{base_url}}/service/client/list-product/62ff2f6c2686c5cea08bb3ea",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-08-07T15:33:20.869Z",
+    "modified": "2022-08-18T23:09:18.486Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "5dd713e1-c339-4089-9ba4-159878f927f9",
+    "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
+    "containerId": "",
+    "name": "get detail product",
+    "url": "{{base_url}}/service/client/detail-product/62ff2f6c2686c5cea08bb3ea",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2022-08-07T15:33:30.888Z",
+    "modified": "2022-08-18T23:09:23.955Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d7b33d88-77e2-4895-93ff-3ee11fb6cfe7",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "10826ad9-0f77-455b-b5d6-ece68250128a",
+    "name": "get banner",
+    "url": "{{base_url}}/service/admin/banner-top",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2022-08-08T02:59:56.743Z",
+    "modified": "2022-08-16T05:03:47.663Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "42d8d31e-acc3-4c9f-8174-fddb9c7edd29",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "10826ad9-0f77-455b-b5d6-ece68250128a",
+    "name": "delete banner",
+    "url": "{{base_url}}/service/admin/banner-top/62f07f43a155d07fa481b2eb",
+    "method": "DELETE",
+    "sortNum": 120000,
+    "created": "2022-08-08T03:00:04.385Z",
+    "modified": "2022-08-08T03:14:45.568Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8247bd10-0ae9-4950-8225-30b53967c373",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "10826ad9-0f77-455b-b5d6-ece68250128a",
+    "name": "create banner",
+    "url": "{{base_url}}/service/admin/banner-top",
+    "method": "POST",
+    "sortNum": 130000,
+    "created": "2022-08-08T03:00:13.364Z",
+    "modified": "2022-08-11T03:38:35.764Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../../Downloads/Banner folding gate 2.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "dcbe6b82-24e7-4c62-9ced-77b8521619fe",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "10826ad9-0f77-455b-b5d6-ece68250128a",
+    "name": "update banner",
+    "url": "{{base_url}}/service/admin/banner-top/62f07fb9daf06ef9da8c32e9",
+    "method": "PUT",
+    "sortNum": 140000,
+    "created": "2022-08-08T03:00:22.033Z",
+    "modified": "2022-08-08T03:15:22.887Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 10.09.16.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "b99b6f43-39c2-4dc9-ab69-dcf9adbc571e",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "e54a306e-9e09-4343-8550-b24c51153987",
+    "name": "get about us",
+    "url": "{{base_url}}/service/admin/about-us",
+    "method": "GET",
+    "sortNum": 150000,
+    "created": "2022-08-08T03:16:30.762Z",
+    "modified": "2022-08-08T03:23:00.170Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c167d7e8-b828-4401-a7cb-fcf28b340ef9",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "e54a306e-9e09-4343-8550-b24c51153987",
+    "name": "delete about us",
+    "url": "{{base_url}}/service/admin/about-us/62f082f0a4d947ebac209f99",
+    "method": "DELETE",
+    "sortNum": 160000,
+    "created": "2022-08-08T03:16:39.242Z",
+    "modified": "2022-08-08T03:28:59.742Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "00142466-56cc-4529-8246-43380e0fd59a",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "e54a306e-9e09-4343-8550-b24c51153987",
+    "name": "update about us",
+    "url": "{{base_url}}/service/admin/about-us/62f08307395497661052075b",
+    "method": "PUT",
+    "sortNum": 170000,
+    "created": "2022-08-08T03:16:47.714Z",
+    "modified": "2022-08-11T13:41:59.272Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "desc",
+          "value": "aku adalah seorang kapiten"
+        },
+        {
+          "name": "motto",
+          "value": ""
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "f4b70f39-a7e0-4bae-b344-13e404924e05",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "e54a306e-9e09-4343-8550-b24c51153987",
+    "name": "create about us",
+    "url": "{{base_url}}/service/admin/about-us",
+    "method": "POST",
+    "sortNum": 180000,
+    "created": "2022-08-08T03:16:56.115Z",
+    "modified": "2022-08-11T13:41:26.760Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "desc",
+          "value": "Sejak tahun 1982, kami telah dipercaya oleh ribuan pelanggan atau perusahaan swasta. Kami selalu menghasilkan produk dengan kualitas terbaik, perakitan cepat dan layanan purna jual terbaik kepadapelanggan kami.Sejak tahun 1982, kami telah dipercaya oleh ribuan pelanggan atau perusahaan swasta. Kami selalu menghasilkan produk dengan kualitas terbaik, perakitan cepat dan layanan purna jual terbaik kepadapelanggan kami."
+        },
+        {
+          "name": "motto",
+          "value": "Menciptakan keindahan dan keamanan, bersaing dalam mutu dan harga"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "210114d7-5956-48d1-b5dc-8b27287caf65",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "768f13a6-8f19-4457-9ce4-d5e3a22fff1d",
+    "name": "get category",
+    "url": "{{base_url}}/service/admin/category",
+    "method": "GET",
+    "sortNum": 200000,
+    "created": "2022-08-08T03:30:58.272Z",
+    "modified": "2022-08-08T03:37:53.109Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3f591cab-ef51-4ca1-aa85-239d3bed8087",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "768f13a6-8f19-4457-9ce4-d5e3a22fff1d",
+    "name": "delete category",
+    "url": "{{base_url}}/service/admin/category/62f08613cf8ea8782ff2a5f4",
+    "method": "DELETE",
+    "sortNum": 210000,
+    "created": "2022-08-08T03:31:05.172Z",
+    "modified": "2022-08-08T03:42:25.783Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "88e1b5ba-575d-4415-a158-a205b883ff8d",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "768f13a6-8f19-4457-9ce4-d5e3a22fff1d",
+    "name": "update category",
+    "url": "{{base_url}}/service/admin/category/62f0862931836d0631532aa7",
+    "method": "PUT",
+    "sortNum": 220000,
+    "created": "2022-08-08T03:31:12.929Z",
+    "modified": "2022-08-08T03:44:50.677Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "categoryName",
+          "value": "roof top golobal"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 10.09.16.png",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "45960d83-1fd8-4732-976f-a0b1ae70d64b",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "768f13a6-8f19-4457-9ce4-d5e3a22fff1d",
+    "name": "create category",
+    "url": "{{base_url}}/service/admin/category",
+    "method": "POST",
+    "sortNum": 230000,
+    "created": "2022-08-08T03:31:24.634Z",
+    "modified": "2022-08-11T03:43:11.699Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "categoryName",
+          "value": "Folding gate"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../../Downloads/gallery-1.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "bdf6914e-120c-4087-9d22-09baa1cf8532",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "8f0c46aa-69e8-4315-b173-e095f800a177",
+    "name": "create product",
+    "url": "{{base_url}}/service/admin/product",
+    "method": "POST",
+    "sortNum": 250000,
+    "created": "2022-08-09T10:57:55.999Z",
+    "modified": "2022-08-11T12:34:55.486Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "desc",
+          "value": "<p>ini adalah deskripsi</p>"
+        },
+        {
+          "name": "who_use_the_product",
+          "value": "<p>dasda</p>"
+        },
+        {
+          "name": "spec",
+          "value": "<p>cat mengunakan anti panas</p>"
+        },
+        {
+          "name": "category",
+          "value": "62f4e1643068d9d613456b69"
+        },
+        {
+          "name": "name",
+          "value": "folding gate baru"
+        },
+        {
+          "name": "price",
+          "value": "3000000"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../../Downloads/gallery-1.jpg"
+        },
+        {
+          "name": "images",
+          "value": "../../../../../Downloads/gallery-1.jpg"
+        },
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 15.26.20.png",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "14c20f43-caef-4d34-8d77-c14400d52b3f",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "8f0c46aa-69e8-4315-b173-e095f800a177",
+    "name": "update product",
+    "url": "{{base_url}}/service/admin/product/62f4d74b7463132061eebc12",
+    "method": "PUT",
+    "sortNum": 260000,
+    "created": "2022-08-09T10:58:04.468Z",
+    "modified": "2022-08-11T10:19:37.715Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "desc",
+          "value": "lorem"
+        },
+        {
+          "name": "spec",
+          "value": "kayus"
+        },
+        {
+          "name": "type",
+          "value": "tipe 25/12"
+        },
+        {
+          "name": "who_use_the_product",
+          "value": "orang yang punya duid"
+        },
+        {
+          "name": "category",
+          "value": "62f47ad1b6f515fb99edf9b0"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-09 at 17.48.37.png"
+        },
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 09.37.26.png",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "cf8f09be-b737-4d30-b31e-4e6be6042bec",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "8f0c46aa-69e8-4315-b173-e095f800a177",
+    "name": "delete product",
+    "url": "{{base_url}}/service/admin/product/62f25616bfef342fc83a554b",
+    "method": "DELETE",
+    "sortNum": 270000,
+    "created": "2022-08-09T10:58:11.136Z",
+    "modified": "2022-08-09T12:42:30.690Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "bd5b5440-4a88-4ce0-b5e0-8c7e0b57a6e5",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "8f0c46aa-69e8-4315-b173-e095f800a177",
+    "name": "get product",
+    "url": "{{base_url}}/service/admin/product",
+    "method": "GET",
+    "sortNum": 280000,
+    "created": "2022-08-09T10:58:28.424Z",
+    "modified": "2022-08-18T23:09:06.175Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib3duZXIiLCJlbWFpbCI6Im93bmVyQGdtYWlsLmNvbSIsInJvbGUiOiJvd25lciIsImlhdCI6MTY2MDg5MjkzMCwiZXhwIjoxNjYwOTc5MzMwfQ.Qdx8G5VsvjJ3HgEl0GzByoLeTYnE_s1direHkcZUPj8"
+    },
+    "tests": []
+  },
+  {
+    "_id": "cad6bc52-ce3c-4f97-b496-93291a27569f",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "f761f567-829f-4671-acfb-990ca7a2114b",
+    "name": "get testimoni",
+    "url": "{{base_url}}/service/admin/testimonial",
+    "method": "GET",
+    "sortNum": 290000,
+    "created": "2022-08-09T12:43:07.655Z",
+    "modified": "2022-08-09T12:48:03.820Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e6c51db9-fe58-4c66-abc9-16037a9d3678",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "f761f567-829f-4671-acfb-990ca7a2114b",
+    "name": "delete testimoni",
+    "url": "{{base_url}}/service/admin/testimonial/62f258bfa6a1d67e09c7dbe9",
+    "method": "DELETE",
+    "sortNum": 300000,
+    "created": "2022-08-09T12:43:15.368Z",
+    "modified": "2022-08-09T13:14:18.383Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3f759503-d68d-4d77-ab94-f65134732423",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "f761f567-829f-4671-acfb-990ca7a2114b",
+    "name": "create testimoni",
+    "url": "{{base_url}}/service/admin/testimonial",
+    "method": "POST",
+    "sortNum": 310000,
+    "created": "2022-08-09T12:43:23.540Z",
+    "modified": "2022-08-11T03:44:29.732Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "work",
+          "value": "programmer"
+        },
+        {
+          "name": "testimonial",
+          "value": "anu apik ketok e"
+        },
+        {
+          "name": "name",
+          "value": "erpan"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../../Downloads/favicon.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "40907438-fa7a-4386-aa56-231e34e79dbd",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "f761f567-829f-4671-acfb-990ca7a2114b",
+    "name": "update testimoni",
+    "url": "{{base_url}}/service/admin/testimonial/62f25dee32ca127f34d6203b",
+    "method": "PUT",
+    "sortNum": 320000,
+    "created": "2022-08-09T12:43:32.771Z",
+    "modified": "2022-08-09T13:18:58.786Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "work",
+          "value": "programmer"
+        },
+        {
+          "name": "testimonial",
+          "value": "anu emboh ye cok"
+        },
+        {
+          "name": "name",
+          "value": "erpan"
+        }
+      ],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 15.26.20.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "d03543ac-e848-4a6c-8789-1eee73bf62d2",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "c6a35bb5-afae-4519-a893-1b0b69d2e27b",
+    "name": "create contact us",
+    "url": "{{base_url}}/service/admin/contact-us",
+    "method": "POST",
+    "sortNum": 330000,
+    "created": "2022-08-09T13:20:27.397Z",
+    "modified": "2022-08-11T13:39:46.403Z",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"address\" : \"jakarta\",\n  \"phone\" : \"08812333213\",\n  \"email\" : \"admin@gmail.com\",\n  \"socialMedia\" : [\n    {\n      \"socialName\" : \"facebook\",\n      \"socialUrl\"  : \"https://facebook.com\"\n    }\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3502a157-a8b2-41de-aa6a-81882e965eb0",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "c6a35bb5-afae-4519-a893-1b0b69d2e27b",
+    "name": "delete contact us",
+    "url": "{{base_url}}/service/admin/contact-us/62f3853a9d780bc1b6615df6",
+    "method": "DELETE",
+    "sortNum": 350000,
+    "created": "2022-08-09T13:21:28.320Z",
+    "modified": "2022-08-10T10:18:14.071Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "57d9f260-58b0-4cb0-af23-91fad66d7e4b",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "c6a35bb5-afae-4519-a893-1b0b69d2e27b",
+    "name": "get contact us",
+    "url": "{{base_url}}/service/admin/contact-us",
+    "method": "GET",
+    "sortNum": 360000,
+    "created": "2022-08-09T13:21:45.267Z",
+    "modified": "2022-08-10T06:42:12.160Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ea0bcc7f-2478-450b-8f5c-0a1751c218cc",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "79c03157-9151-482e-b97a-f14bf1bc0d29",
+    "name": "get galery",
+    "url": "{{base_url}}/service/admin/galery",
+    "method": "GET",
+    "sortNum": 370000,
+    "created": "2022-08-09T14:04:26.435Z",
+    "modified": "2022-08-09T14:05:57.568Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "4f7c693d-1c51-4ad3-a317-36660f385e1a",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "79c03157-9151-482e-b97a-f14bf1bc0d29",
+    "name": "delete galery",
+    "url": "{{base_url}}/service/admin/galery/62f270c2a7952d10ef45f4c9",
+    "method": "DELETE",
+    "sortNum": 380000,
+    "created": "2022-08-09T14:04:34.980Z",
+    "modified": "2022-08-09T14:36:17.319Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "95190ccc-e7b9-41b9-bbe4-b21630692944",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "79c03157-9151-482e-b97a-f14bf1bc0d29",
+    "name": "update galery",
+    "url": "{{base_url}}/service/admin/galery/62f270c2a7952d10ef45f4c9",
+    "method": "PUT",
+    "sortNum": 390000,
+    "created": "2022-08-09T14:04:45.601Z",
+    "modified": "2022-08-09T14:35:56.657Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 15.26.20.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "17aabca0-c5e5-40ce-ab69-ff371aab8f77",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "79c03157-9151-482e-b97a-f14bf1bc0d29",
+    "name": "create galery",
+    "url": "{{base_url}}/service/admin/galery",
+    "method": "POST",
+    "sortNum": 400000,
+    "created": "2022-08-09T14:04:53.690Z",
+    "modified": "2022-08-09T14:09:08.979Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "images",
+          "value": "../../../../Screen Shot 2022-08-08 at 09.37.26.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "b6c84d7e-c047-43d2-aee1-1d9d11c79ff1",
+    "colId": "d7cf7620-94dc-42c3-9e4e-de00383267d9",
+    "containerId": "c6a35bb5-afae-4519-a893-1b0b69d2e27b",
+    "name": "edit contact us",
+    "url": "{{base_url}}/service/admin/contact-us/62f386b7cc6a5de8bd404525",
+    "method": "PUT",
+    "sortNum": 420000,
+    "created": "2022-08-10T10:21:21.992Z",
+    "modified": "2022-08-11T13:40:59.487Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"address\" : \"jakarta\",\n  \"phone\" : \"11\",\n  \"email\" : \"admin@gmail.com\",\n  \"socialMedia\" : [\n    {\n      \"socialName\" : \"facebook\",\n      \"socialUrl\"  : \"https://facebook.com\"\n    }\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

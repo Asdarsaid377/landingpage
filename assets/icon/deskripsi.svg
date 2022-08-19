@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_31" data-name="Rectangle 31" width="24" height="24" transform="translate(988 317)" fill="#af0a04" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="deskripsi" transform="translate(-988 -317)" clip-path="url(#clip-path)">
+    <g id="__TEMP__SVG__" transform="translate(986.286 315.285)">
+      <path id="Path_15" data-name="Path 15" d="M22.028,7.972l-6-6a.778.778,0,0,0-.6-.257H6.857A1.719,1.719,0,0,0,5.143,3.429V24a1.719,1.719,0,0,0,1.714,1.714H20.571A1.719,1.719,0,0,0,22.286,24V8.571a.779.779,0,0,0-.257-.6Zm-6.6-4.2,4.8,4.8h-4.8ZM20.571,24H6.857V3.429h6.857V8.571a1.719,1.719,0,0,0,1.714,1.714h5.143Z" fill="#af0a04"/>
+      <path id="Path_16" data-name="Path 16" d="M8.571,18.857H18.857v1.714H8.571Z" fill="#af0a04"/>
+      <path id="Path_17" data-name="Path 17" d="M8.571,13.714H18.857v1.714H8.571Z" fill="#af0a04"/>
+    </g>
+  </g>
+</svg>
