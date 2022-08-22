@@ -4,20 +4,21 @@ import Link from "next/link";
 import axios from "axios";
 
 const ListProduk = () => {
-	const [gambar, setGambar] = useState("");
+	const [data, setData] = useState([]);
 
 	const getDetail = async () => {
 		const res = await axios.get(
 			"https://api-bunka.teknologi-nusantara.com/api/service/client/landing-pages"
 		);
-		setGambar(
-			"https://api-bunka.teknologi-nusantara.com/api" +
-				res.data.data.category[0].imagesUrl
-		);
+
+		setData(res.data.data.category);
+		// setHarga(res.data.data.price);
+		// setName(res.data.data.name);
 	};
 	useEffect(() => {
 		getDetail();
 	}, []);
+
 	return (
 		<>
 			<div className="mx-[100px]">
@@ -32,26 +33,18 @@ const ListProduk = () => {
 						Semua Produk Folding Gate
 					</span>
 					<div className="flex justify-start flex-wrap items-center mt-5 z-10 gap-8 mb-8">
-						<CardList
-							jenis={"Super Folding Gate"}
-							harga={"Rp. 1.500.000 M/2"}
-							gambar={gambar}
-						/>
-						<CardList
-							jenis={"Super Folding Gate"}
-							harga={"Rp. 1.500.000 M/2"}
-							gambar={gambar}
-						/>
-						<CardList
-							jenis={"Super Folding Gate"}
-							harga={"Rp. 1.500.000 M/2"}
-							gambar={gambar}
-						/>
-						<CardList
-							jenis={"Super Folding Gate"}
-							harga={"Rp. 1.500.000 M/2"}
-							gambar={gambar}
-						/>
+						{data.map((item) => {
+							return (
+								<div className="" key={item.id}>
+									<CardList
+										id={item.id}
+										jenis={item.categoryName}
+										// harga={harga}
+										gambar={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
+									/>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>

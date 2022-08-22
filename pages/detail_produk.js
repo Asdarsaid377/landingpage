@@ -14,7 +14,7 @@ const detail_produk = () => {
 				</div>
 				<div className="mt-10">
 					<DetailProduk />
-					<div className="mt-20 z-50 -mt[400px] sticky top-[620px]">
+					<div className="mt-20 z-50 -mt[400px] sticky">
 						<Whatsapp />
 					</div>
 				</div>

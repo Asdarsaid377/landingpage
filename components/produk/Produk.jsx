@@ -3,16 +3,15 @@ import React, { useState, useEffect } from "react";
 import Card from "../card/Card";
 
 const Produk = () => {
-	const [gambar, setGambar] = useState("");
+	// const [gambar, setGambar] = useState([]);
+	const [data, setData] = useState([]);
 
 	const getDetail = async () => {
 		const res = await axios.get(
 			"https://api-bunka.teknologi-nusantara.com/api/service/client/landing-pages"
 		);
-		setGambar(
-			"https://api-bunka.teknologi-nusantara.com/api" +
-				res.data.data.category[0].imagesUrl
-		);
+		setData(res.data.data.category);
+		console.log(res.data);
 	};
 	useEffect(() => {
 		getDetail();
@@ -28,10 +27,16 @@ const Produk = () => {
 					<p>Temukan apa yang kamu butuhkan disini.</p>
 				</div>
 				<div className="flex justify-around items-center mx-[120px] mt-12 gap-8">
-					<Card title="Folding Gate" gambar={gambar} />
-					<Card title="Rooling Door" gambar={gambar} />
-					<Card title="Garage Door" gambar={gambar} />
-					<Card title="Folding Gate" gambar={gambar} />
+					{data.map((item) => {
+						return (
+							<div className="flex" key={item.id}>
+								<Card
+									title={item.categoryName}
+									gambar={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
+								/>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</>

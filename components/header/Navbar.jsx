@@ -3,6 +3,7 @@ import axios from "axios";
 import { BsWhatsapp } from "react-icons/bs";
 import toko from "./toko.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
 	const [active, setActive] = useState("Beranda");
@@ -28,9 +29,13 @@ const Navbar = () => {
 				<nav className="py-4">
 					<div className="container flex mx-auto">
 						{/* sisi 1 */}
-						<div className="w-1/3 flex justify-start -mr-10 items-center">
-							<img src={logos} alt="" className="flex" />
-							<span className="uppercase font-bold text-[16px]">{name}</span>
+						<div className="w-1/3 flex justify-start items-center">
+							<Link href="/">
+								<img src={logos} alt="" className="hover:cursor-pointer" />
+							</Link>
+							<span className="uppercase ml-5 font-bold text-[16px]">
+								{name}
+							</span>
 						</div>
 						{/* sisi 2 */}
 						<div className="w-1/3 flex justify-around items-center">
@@ -71,7 +76,7 @@ const Navbar = () => {
 							</ul>
 						</div>
 						{/* sisi 3 */}
-						<div className="w-1/3 flex justify-end absolute mr-9 items-center">
+						<div className="w-1/3 flex justify-end mr-9 items-center">
 							<div className="flex items-center hover:scale-105 rounded-full mr-6 py-2 px-7 bg-green-50 border-green-400 border-2">
 								<span className="w-6 h-6 mr-3">
 									<Image src={toko} alt="" />
