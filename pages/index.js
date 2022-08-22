@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-import Header from "../components/header/Header";
 import Produk from "../components/produk/Produk";
 import Review from "../components/review/Review";
 import Contact from "../components/contact/Contact";

@@ -5,7 +5,7 @@ import toko from "./toko.png";
 import Image from "next/image";
 
 const Navbar = () => {
-	const [active, setActive] = useState("");
+	const [active, setActive] = useState("Beranda");
 	const [logos, setLogos] = useState("/");
 	const [name, setName] = useState("");
 
@@ -71,7 +71,7 @@ const Navbar = () => {
 							</ul>
 						</div>
 						{/* sisi 3 */}
-						<div className="w-1/3 flex justify-center items-center">
+						<div className="w-1/3 flex justify-end absolute mr-9 items-center">
 							<div className="flex items-center hover:scale-105 rounded-full mr-6 py-2 px-7 bg-green-50 border-green-400 border-2">
 								<span className="w-6 h-6 mr-3">
 									<Image src={toko} alt="" />
