@@ -52,9 +52,7 @@ const Review = (props) => {
         <Image src={background_right} />
       </div>
     </div>
-    <div className="-mt-96">
-      <Gallery />
-    </div>
+   
   </div>;
 };
 

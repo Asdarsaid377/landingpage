@@ -6,8 +6,4 @@ const nextConfig = {
     domains: ["api-bunka.teknologi-nusantara.com"]
   }
 }
-module.exports = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-}
+module.exports = nextConfig

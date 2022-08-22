@@ -5,6 +5,7 @@ import { AiFillCloseCircle, AiOutlineBgColors, AiOutlineFileProtect } from "reac
 import { ImClipboard } from "react-icons/im";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 
 const DetailProduk = () => {
   const [deskripsi, setDeskripsi] = useState("Deskripsi");

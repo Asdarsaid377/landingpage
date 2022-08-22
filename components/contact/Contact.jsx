@@ -4,7 +4,6 @@ import { BsFacebook } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { AiFillYoutube, AiFillInstagram } from "react-icons/ai";
 import Image from "next/image"
-import dataNavbar from "../../data/Data"
 import axios from "axios";
 
 const Contact = ({ names }) => {
@@ -63,8 +62,9 @@ const Contact = ({ names }) => {
       </div>
       <div className="maps flex justify-center w-[90%] items-center text-white mr-20">
         <iframe frameBorder={200} style={{ width: "100%", height: "70%", borderRadius: "20px" }}
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63468.48521907333!2d106.75725949999999!3d-6.1601685999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c9d110d719%3A0x300c5e82dd4b8a0!2sJakarta%20Barat%2C%20Kec.%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1660879695331!5m2!1sid!2sid" width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+
       </div>
     </div>
 
