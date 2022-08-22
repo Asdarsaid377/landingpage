@@ -12,8 +12,6 @@ const ListProduk = () => {
 		);
 
 		setData(res.data.data.category);
-		// setHarga(res.data.data.price);
-		// setName(res.data.data.name);
 	};
 	useEffect(() => {
 		getDetail();
