@@ -42,13 +42,6 @@ const Gallery = () => {
 													src={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
 												/>
 											</span>
-											<span className="block object-cover flex-wrap object-center w-full h-full rounded-lg">
-												<img
-													alt="gallery"
-													className="rounded-lg"
-													src={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
-												/>
-											</span>
 										</div>
 									</div>
 								);
