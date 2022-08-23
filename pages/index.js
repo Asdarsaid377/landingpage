@@ -20,7 +20,7 @@ export default function Home({ names }) {
 				<div id="Beranda">
 					<Hero />
 				</div>
-				<div className="mt-20 z-40 -mt[400px] md:-mt[400px] sticky top-[620px]">
+				<div className="mt-20 z-40 -mt[420px] md:-mt[400px] sticky top-[680px]">
 					<Whatsapp />
 				</div>
 				<div className="md:mt-10 mt-2" id="Produk">

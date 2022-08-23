@@ -40,9 +40,9 @@ const Hero = () => {
 	return (
 		<>
 			<div className="w-full z-20 h-full overflow-x-hidden relative">
-				<div className="md:mx-20 mx-3">
-					<div className="w-full z-30 rounded-2xl h-[150px] md:h-[280px] mt-5 md:my-20">
-						<img src={banner} alt="" className="z-30 rounded-2xl" />
+				<div className="md:mx-20 z-30 mx-3">
+					<div className="w-full rounded-2xl h-[150px] md:h-[280px] mt-5 md:my-20">
+						<img src={banner} alt="" className="rounded-2xl" />
 					</div>
 					<div className="mt-7" id="Tentang">
 						<div className="flex-wrap md:flex items-center justify-center">
@@ -63,7 +63,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className="md:mx-20 mt-12 mx-12 md:mt-20">
-					<div className="md:flex flex-wrap w-[100%] mt-10 items-center md:gap-6">
+					<div className="md:flex w-[100%] mt-10 items-center md:gap-6">
 						<div className="md:w-[35%] text-center md:text-left">
 							<span className="text-primary md:text-left text-center font-bold text-[40px] ">
 								Kenapa Harus Kami
@@ -73,17 +73,17 @@ const Hero = () => {
 								dari itu.
 							</p>
 						</div>
-						<div className="md:w-56 h-32 md:mt-0 mt-12 rounded-2xl text-center items-center flex-col flex justify-center ">
+						<div className="md:w-56 md:h-32 md:mt-0 mt-12 text-center items-center md:flex-col flex md:justify-center ">
 							<Image src={service} alt="gambar" />
 							<span className="text-[20px] font-bold">
 								Kualitas Produk Terbaik
 							</span>
 						</div>
-						<div className="md:w-56 h-32 md:mt-0 mt-12 rounded-2xl text-center items-center flex-col flex justify-center ">
+						<div className="md:w-56 md:h-32 md:mt-0 mt-12 text-center items-center md:flex-col flex md:justify-center ">
 							<Image src={service} alt="gambar" className="w-20 h-20" />
 							<span className="text-[20px] font-bold">Perakitan Cepat</span>
 						</div>
-						<div className="md:w-56 h-32 md:mt-0 mt-12 rounded-2xl text-center items-center flex-col flex justify-center ">
+						<div className="md:w-56 md:h-32 md:mt-0 mt-12 text-center items-center md:flex-col flex md:justify-center ">
 							<Image src={service} alt="gambar" className="w-20 h-20" />
 							<span className="text-[20px] font-bold">Layanan Terbaik</span>
 						</div>

@@ -7,6 +7,8 @@ import dropbox from "./dropbox.png";
 import logo from "./logo.svg";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
+import menuicon from "./menu.png";
+import closeicon from "./close.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -25,29 +27,31 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 
 export {
-  airbnb,
-  bill,
-  binance,
-  card,
-  coinbase,
-  dropbox,
-  logo,
-  quotes,
-  robot,
-  send,
-  shield,
-  star,
-  menu,
-  close,
-  google,
-  apple,
-  arrowUp,
-  discount,
-  facebook,
-  instagram,
-  linkedin,
-  twitter,
-  people01,
-  people02,
-  people03,
+	airbnb,
+	bill,
+	binance,
+	card,
+	coinbase,
+	dropbox,
+	logo,
+	quotes,
+	robot,
+	menuicon,
+	closeicon,
+	send,
+	shield,
+	star,
+	menu,
+	close,
+	google,
+	apple,
+	arrowUp,
+	discount,
+	facebook,
+	instagram,
+	linkedin,
+	twitter,
+	people01,
+	people02,
+	people03,
 };

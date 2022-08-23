@@ -42,14 +42,14 @@ const Review = (props) => {
 					<span className="text-center justify-center flex items-end">
 						Saat-saat memberi mereka pengalaman terbaik
 					</span>
-					<div className="flex flex-col items-center">
-						<div className="rounded-full w-full items-center flex justify-between md:gap-96 mt-16 ">
+					<div className="flex flex-col mt-16 items-center">
+						<div className="rounded-full w-full items-center flex justify-center md:gap-48 gap-24 mx-[100px]  ">
 							<button
 								className="hover:scale-125 shadow-lg rounded-full"
 								onClick={() => setIndex(index <= 0 ? index + 1 : 0)}>
 								<GrPrevious />
 							</button>
-							<img alt="" src={profil} className="w-32 h-32" />
+							<img alt="" src={profil} className="w-32 rounded-full h-32" />
 							<button
 								className="hover:scale-125 shadow-lg rounded-full"
 								onClick={() => setIndex(index >= 1 ? (index = 0) : index + 1)}>
@@ -58,7 +58,7 @@ const Review = (props) => {
 						</div>
 						<span className="font-bold text-[15px] mt-3">{name}</span>
 						<span className="text-[15px] text-gray-500">{work}</span>
-						<span className="mt-8 text-center">{testimonial}</span>
+						<span className="px-24 text-center">{testimonial}</span>
 					</div>
 				</div>
 				<div className="w-[30%] overflow-hidden mt-[400px] mr-[-168px] opacity-75">

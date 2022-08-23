@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "./toko.png";
 import Image from "next/image";
-import { close, menu } from "../../assets/images";
+import { close, menu, menuicon, closeicon } from "../../assets/images";
 import { BsWhatsapp } from "react-icons/bs";
 import Link from "next/link";
 import axios from "axios";
@@ -92,11 +92,13 @@ const LandingPage = () => {
 						</div>
 						{/* Mobile Menu */}
 						<div className="sm:hidden flex flex-1 mr-6 justify-end items-center">
-							<Image
-								src={mobile ? close : menu}
-								className="w-[28px] hover:cursor-pointer h-[28px] object-contain"
-								onClick={() => setMobile(!mobile)}
-							/>
+							<span className="max-w-[28px] max-h-[28px]">
+								<Image
+									src={mobile ? closeicon : menuicon}
+									className="hover:cursor-pointer object-contain"
+									onClick={() => setMobile(!mobile)}
+								/>
+							</span>
 							<div
 								className={`${
 									!mobile ? "hidden" : "flex"

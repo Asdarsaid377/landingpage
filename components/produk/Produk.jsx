@@ -18,7 +18,7 @@ const Produk = () => {
 	return (
 		<>
 			<div className="w-[100%] h-auto bg-gray-100">
-				<div className="flex-wrap items-center md:flex-col mb-3 w-full flex justify-center">
+				<div className="flex-wrap sm:flex-col items-center md:flex-col mb-3 w-full flex justify-center">
 					<span className="text-primary text-center text-[40px] mb-3 md:mb-[16px] font-bold">
 						Produk Kami
 					</span>

@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Gallery = () => {
-	const [foto, setFoto] = useState([]);
+	const [data, setData] = useState([]);
 	const getImage = async () => {
 		const img = await axios.get(
 			"https://api-bunka.teknologi-nusantara.com/api/service/client/landing-pages"
 		);
-		setFoto(
-			"https://api-bunka.teknologi-nusantara.com/api" +
-				img.data.data.galery[0].imagesUrl
-		);
+		setData(img.data.data.galery);
 	};
 	useEffect(() => {
 		getImage();
@@ -31,33 +28,19 @@ const Gallery = () => {
 				<section className="overflow-hidden z-20 text-gray-700 ">
 					<div className="container py-2 mx-auto lg:pt-12 lg:px-32">
 						<div className="flex flex-wrap flex-grow md:-m-2">
-							<div className="flex flex-wrap flex-grow w-1/3">
-								<div className="w-full p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block object-cover object-center w-full h-full rounded-lg"
-										src={foto}
-									/>
-								</div>
-							</div>
-							<div className="flex flex-wrap w-1/4">
-								<div className="w-full p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block object-cover object-center w-full h-full rounded-lg"
-										src={foto}
-									/>
-								</div>
-							</div>
-							<div className="flex flex-wrap w-1/4">
-								<div className="w-full p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block object-cover object-center w-full h-full rounded-lg"
-										src={foto}
-									/>
-								</div>
-							</div>
+							{data.map((item) => {
+								return (
+									<div className="flex flex-wrap flex-grow w-1/3">
+										<div className="w-full p-1 md:p-2">
+											<img
+												alt="gallery"
+												className="block object-cover object-center w-full h-full rounded-lg"
+												src={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
+											/>
+										</div>
+									</div>
+								);
+							})}
 						</div>
 					</div>
 				</section>
