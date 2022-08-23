@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 const Gallery = () => {
 	const [data, setData] = useState([]);
@@ -25,20 +26,29 @@ const Gallery = () => {
 						<br /> membuat produk terbaik.
 					</p>
 				</div>
-				<section className="overflow-hidden z-20 text-gray-700 ">
+				<section className=" z-20 text-gray-700 ">
 					<div className="container py-2 mx-auto lg:pt-12 lg:px-32">
 						<div className="flex flex-wrap flex-grow md:-m-2">
 							{data.map((item) => {
 								return (
 									<div
-										key={item._id}
+										key={item.imagesName}
 										className="flex flex-wrap flex-grow w-1/3">
 										<div className="w-full p-1 md:p-2">
-											<img
-												alt="gallery"
-												className="block object-cover object-center w-full h-full rounded-lg"
-												src={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
-											/>
+											<span className="block object-cover flex-wrap object-center w-full h-full rounded-lg">
+												<img
+													alt="gallery"
+													className="rounded-lg"
+													src={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
+												/>
+											</span>
+											<span className="block object-cover flex-wrap object-center w-full h-full rounded-lg">
+												<img
+													alt="gallery"
+													className="rounded-lg"
+													src={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
+												/>
+											</span>
 										</div>
 									</div>
 								);
