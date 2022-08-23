@@ -10,7 +10,6 @@ import { ImClipboard } from "react-icons/im";
 import axios from "axios";
 import Link from "next/link";
 import parse from "html-react-parser";
-import { useParams } from "react-router-dom";
 
 const DetailProduk = () => {
 	const [deskripsi, setDeskripsi] = useState("Deskripsi");
