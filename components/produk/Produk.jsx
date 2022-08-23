@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Card from "../card/Card";
 
 const Produk = () => {
-	// const [gambar, setGambar] = useState([]);
 	const [data, setData] = useState([]);
 
 	const getDetail = async () => {
@@ -11,7 +10,6 @@ const Produk = () => {
 			"https://api-bunka.teknologi-nusantara.com/api/service/client/landing-pages"
 		);
 		setData(res.data.data.category);
-		console.log(res.data);
 	};
 	useEffect(() => {
 		getDetail();
@@ -26,10 +24,10 @@ const Produk = () => {
 					</span>
 					<p>Temukan apa yang kamu butuhkan disini.</p>
 				</div>
-				<div className="flex-wrap md:flex justify-around items-center px-[10%] md:mx-[120px] md:mt-12 gap-8">
+				<div className="flex-wrap md:flex justify-start items-center mx-20 md:mx-[100px] md:mt-12 gap-8">
 					{data.map((item) => {
 						return (
-							<div className="flex mt-7 md:mt-1" key={item.id}>
+							<div className="flex flex-wrap gap-8 mt-7 md:mt-1" key={item.id}>
 								<Card
 									title={item.categoryName}
 									gambar={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}

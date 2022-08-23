@@ -12,7 +12,11 @@ const Hero = () => {
 	const [about, setAbout] = useState("");
 	const [banner, setBanner] = useState("");
 	const [motto, setMotto] = useState("");
-	const [data, setData] = useState([]);
+	const [index, setIndex] = useState(0);
+
+	setTimeout(() => {
+		setIndex(index === 0 ? index + 1 : 0);
+	}, 3000);
 
 	const getAbout = async () => {
 		const res = await axios.get(
@@ -26,21 +30,19 @@ const Hero = () => {
 
 		setBanner(
 			"https://api-bunka.teknologi-nusantara.com/api" +
-				img.data.data.banner[0].bannerUrl
+				img.data.data.banner[index].bannerUrl
 		);
 	};
 
 	useEffect(() => {
 		getAbout();
-	}, []);
+	}, [index]);
 	return (
 		<>
-			<div
-				className="w-full z-20 h-full overflow-x-hidden relative"
-				>
+			<div className="w-full z-20 h-full overflow-x-hidden relative">
 				<div className="md:mx-20 mx-3">
-					<div className="w-full flex items-center justify-center rounded-2xl h-[150px] md:h-[280px] mt-5 md:my-20">
-						<img src={banner} alt="" className=" z-30 rounded-2xl" />
+					<div className="w-full z-30 rounded-2xl h-[150px] md:h-[280px] mt-5 md:my-20">
+						<img src={banner} alt="" className="z-30 rounded-2xl" />
 					</div>
 					<div className="mt-7" id="Tentang">
 						<div className="flex-wrap md:flex items-center justify-center">
@@ -72,7 +74,7 @@ const Hero = () => {
 							</p>
 						</div>
 						<div className="md:w-56 h-32 md:mt-0 mt-12 rounded-2xl text-center items-center flex-col flex justify-center ">
-							<Image src={service} alt="gambar" className="w-20 h-20" />
+							<Image src={service} alt="gambar" />
 							<span className="text-[20px] font-bold">
 								Kualitas Produk Terbaik
 							</span>
@@ -87,11 +89,11 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-				<div className="w-[550px] hidden md:flex opacity-75 z-0 absolute top-[200px] left-[-200px] ">
-					<Image src={background_left} priority />
+				<div className="w-[550px] hidden md:flex opacity-75 absolute top-[200px] left-[-200px] ">
+					<Image src={background_left} />
 				</div>
-				<div className="w-[550px] hidden md:flex  opacity-75 z-0 absolute right-[-200px] bottom-0">
-					<Image src={background_right} priority />
+				<div className="w-[550px] hidden md:flex  opacity-75 absolute right-[-200px] bottom-0">
+					<Image src={background_right} />
 				</div>
 			</div>
 		</>

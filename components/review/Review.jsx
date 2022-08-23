@@ -2,28 +2,32 @@ import React, { useState, useEffect } from "react";
 import { background_left, background_right } from "../../assets/icon";
 import Image from "next/image";
 import axios from "axios";
+import { GrPrevious, GrNext } from "react-icons/gr";
 
 const Review = (props) => {
 	const [name, setName] = useState("");
 	const [testimonial, setTestimonial] = useState("");
 	const [work, setWork] = useState("");
 	const [profil, setprofil] = useState("");
+	const [index, setIndex] = useState(0);
 
 	const getData = async () => {
 		const res = await axios.get(
 			"https://api-bunka.teknologi-nusantara.com/api/service/client/landing-pages"
 		);
-		setName(res.data.data.testimonial[1].name);
-		setTestimonial(res.data.data.testimonial[1].testimonial);
-		setWork(res.data.data.testimonial[1].work);
+		setName(res.data.data.testimonial[index].name);
+		setTestimonial(res.data.data.testimonial[index].testimonial);
+		setWork(res.data.data.testimonial[index].work);
 		setprofil(
 			"https://api-bunka.teknologi-nusantara.com/api" +
-				res.data.data.testimonial[1].imagesUrl
+				res.data.data.testimonial[index].imagesUrl
 		);
 	};
+
+	console.log(index);
 	useEffect(() => {
 		getData();
-	}, []);
+	}, [index]);
 
 	return (
 		<div className="w-full h-full relative">
@@ -38,9 +42,19 @@ const Review = (props) => {
 					<span className="text-center justify-center flex items-end">
 						Saat-saat memberi mereka pengalaman terbaik
 					</span>
-					<div className="flex justify-center flex-col items-center">
-						<div className="rounded-full mt-16 w-32 h-32">
-							<img alt="" src={profil} />
+					<div className="flex flex-col items-center">
+						<div className="rounded-full w-full items-center flex justify-between md:gap-96 mt-16 ">
+							<button
+								className="hover:scale-125 shadow-lg rounded-full"
+								onClick={() => setIndex(index <= 0 ? index + 1 : 0)}>
+								<GrPrevious />
+							</button>
+							<img alt="" src={profil} className="w-32 h-32" />
+							<button
+								className="hover:scale-125 shadow-lg rounded-full"
+								onClick={() => setIndex(index >= 1 ? (index = 0) : index + 1)}>
+								<GrNext />
+							</button>
 						</div>
 						<span className="font-bold text-[15px] mt-3">{name}</span>
 						<span className="text-[15px] text-gray-500">{work}</span>
