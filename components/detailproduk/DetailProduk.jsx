@@ -9,7 +9,8 @@ import {
 import { ImClipboard } from "react-icons/im";
 import axios from "axios";
 import Link from "next/link";
-import Image from "next/image";
+import parse from "html-react-parser";
+import { useParams } from "react-router-dom";
 
 const DetailProduk = () => {
 	const [deskripsi, setDeskripsi] = useState("Deskripsi");
@@ -18,7 +19,6 @@ const DetailProduk = () => {
 	const [spec, setSpec] = useState();
 	const [harga, setHarga] = useState();
 	const [name, setName] = useState();
-	const [id, setId] = useState();
 	const [type, setType] = useState();
 	const [user, setUser] = useState();
 
@@ -30,12 +30,13 @@ const DetailProduk = () => {
 			"https://api-bunka.teknologi-nusantara.com/api" +
 				res.data.data.images[0].url
 		);
-		setDesc(res.data.data.desc);
-		setSpec(res.data.data.spec);
-		setType(res.data.data.type);
+
+		setDesc(parse(res.data.data.desc));
+		setSpec(parse(res.data.data.spec));
+		setType(parse(res.data.data.type));
 		setHarga(res.data.data.price);
 		setName(res.data.data.name);
-		setUser(res.data.data.who_use_the_product);
+		setUser(parse(res.data.data.who_use_the_product));
 	};
 
 	useEffect(() => {
@@ -44,7 +45,7 @@ const DetailProduk = () => {
 
 	return (
 		<div>
-			<div className="mx-[100px]">
+			<div className="md:mx-[100px] mx-12">
 				<div className="text-primary">
 					<Link href="/" className="hover:font-bold text-primary">
 						Beranda/
@@ -56,7 +57,7 @@ const DetailProduk = () => {
 				</div>
 				<div className="mt-9">
 					<span className="text-[40px] text-black font-bold mt-9">{name}</span>
-					<div className="flex justify-start items-start mt-5 z-10 mb-8">
+					<div className="md:flex justify-start items-start mt-5 z-10 mb-8">
 						<CardDetail jenis={name} harga={harga} gambar={gambar} />
 						<div>
 							<span className="text-[40px] text-primary font-bold mt-9">

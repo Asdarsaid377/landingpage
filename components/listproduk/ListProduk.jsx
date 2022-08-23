@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CardList from "../card/CardList";
 import Link from "next/link";
 import axios from "axios";
+import Card from "../card/Card";
 
 const ListProduk = () => {
 	const [data, setData] = useState([]);
@@ -10,7 +11,6 @@ const ListProduk = () => {
 		const res = await axios.get(
 			"https://api-bunka.teknologi-nusantara.com/api/service/client/landing-pages"
 		);
-
 		setData(res.data.data.category);
 	};
 	useEffect(() => {
@@ -19,7 +19,7 @@ const ListProduk = () => {
 
 	return (
 		<>
-			<div className="mx-[100px]">
+			<div className="md:mx-[100px] mx-12">
 				<div className="text-primary">
 					<Link href="/" className="text-primary">
 						Beranda
@@ -33,11 +33,10 @@ const ListProduk = () => {
 					<div className="flex justify-start flex-wrap items-center mt-5 z-10 gap-8 mb-8">
 						{data.map((item) => {
 							return (
-								<div className="" key={item.id}>
+								<div className="" key={item._id}>
 									<CardList
-										id={item.id}
+										id={item._id}
 										jenis={item.categoryName}
-										// harga={harga}
 										gambar={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
 									/>
 								</div>

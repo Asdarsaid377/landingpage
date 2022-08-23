@@ -4,32 +4,35 @@ import Produk from "../components/produk/Produk";
 import Review from "../components/review/Review";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
-import Hero from "../components/hero/Hero2";
+import Hero from "../components/hero/Hero";
 import Whatsapp from "../components/wa/Whatsapp";
-import Navbar from "../components/header/Navbar";
 import Gallery from "../components/gallery/Gallery";
+import LandingPage from "../components/header/Header";
 
 export default function Home({ names }) {
 	return (
 		<>
-			<div className="bg-gray-100 relative">
-				<div className="sticky top-0 z-40 bg-white w-full">
-					<Navbar />
+			{/* <LandingPage /> */}
+			<div className="bg-gray-100">
+				<div className="sticky top-0 z-50">
+					<LandingPage />
 				</div>
-				<Hero />
-				<div className="mt-20 z-50 -mt[400px] sticky top-[620px]">
+				<div id="Beranda">
+					<Hero />
+				</div>
+				<div className="mt-20 z-40 -mt[400px] md:-mt[400px] sticky top-[620px]">
 					<Whatsapp />
 				</div>
-				<div className="mt-20">
+				<div className="md:mt-10 mt-2" id="Produk">
 					<Produk />
 				</div>
-				<div className="mt-20 relative flex flex-col bg-gray-100">
+				<div className="md:mt-20 mt-10 relative md:flex md:flex-col bg-gray-100">
 					<Review nama={names} />
-					<div className="absolute mt-96">
+					<div className="md:mt-96 md:absolute">
 						<Gallery />
 					</div>
 				</div>
-				<div className="mt-20">
+				<div className="md:mt-20 mt-12">
 					<Contact />
 					<Footer />
 				</div>

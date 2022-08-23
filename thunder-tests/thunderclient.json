@@ -280,11 +280,11 @@
     "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
     "containerId": "",
     "name": "get list product",
-    "url": "{{base_url}}/service/client/list-product/62ff2f6c2686c5cea08bb3ea",
+    "url": "{{base_url}}/service/client/list-product/62fa1b84ec57f8751ce31c56",
     "method": "GET",
     "sortNum": 40000,
     "created": "2022-08-07T15:33:20.869Z",
-    "modified": "2022-08-22T04:16:03.284Z",
+    "modified": "2022-08-22T09:33:02.438Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -294,11 +294,11 @@
     "colId": "a15b65d2-8caa-44b8-aa68-2d862f281f0a",
     "containerId": "",
     "name": "get detail product",
-    "url": "{{base_url}}/service/client/detail-product/62ff95ab53d45ad0efa678e1",
+    "url": "{{base_url}}/service/client/detail-product/62ff2f6c2686c5cea08bb3ea",
     "method": "GET",
     "sortNum": 50000,
     "created": "2022-08-07T15:33:30.888Z",
-    "modified": "2022-08-22T04:15:44.506Z",
+    "modified": "2022-08-22T09:31:45.916Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -312,7 +312,7 @@
     "method": "GET",
     "sortNum": 110000,
     "created": "2022-08-08T02:59:56.743Z",
-    "modified": "2022-08-16T05:03:47.663Z",
+    "modified": "2022-08-08T03:01:49.224Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -687,13 +687,9 @@
     "method": "GET",
     "sortNum": 280000,
     "created": "2022-08-09T10:58:28.424Z",
-    "modified": "2022-08-18T23:09:06.175Z",
+    "modified": "2022-08-09T11:03:36.981Z",
     "headers": [],
     "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib3duZXIiLCJlbWFpbCI6Im93bmVyQGdtYWlsLmNvbSIsInJvbGUiOiJvd25lciIsImlhdCI6MTY2MDg5MjkzMCwiZXhwIjoxNjYwOTc5MzMwfQ.Qdx8G5VsvjJ3HgEl0GzByoLeTYnE_s1direHkcZUPj8"
-    },
     "tests": []
   },
   {

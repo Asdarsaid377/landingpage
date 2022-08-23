@@ -34,15 +34,17 @@ const Hero = () => {
 	}, []);
 	return (
 		<>
-			<div className="relative items-start text-center overflow-x-hidden bg-[#F8F8F8] px-20">
-				<div id="Beranda" className="h-[300px] rounded-xl mt-20 bg-red-500">
+			<div className="relative items-start text-center md:overflow-x-hidden overflow-x-hidden bg-[#F8F8F8] px-5 md:px-20">
+				<div
+					id="Beranda"
+					className="md:h-[300px]rounded-xl w-full mt-7 md:mt-20">
 					<img src={banner} className="rounded-lg z-10" />
 				</div>
-				<div className="flex justify-center mt-20 gap-12 my-10 mx-32 items-center">
-					<div className="image w-[30%] h-[537px] relative" id="Tentang">
+				<div className="flex-wrap md:flex justify-center gap-12 my-10 mx-32 items-center">
+					<div className="w-[30%] h-[537px] md:relative" id="Tentang">
 						<Image src={woman} priority layout="fill" alt="gambar" />
 					</div>
-					<div className="content flex-wrap w-[70%] text-left">
+					<div className="content flex-wrap w-full text-center md:text-left">
 						<div className="text-primary font-bold text-[40px] mb-6">
 							Tentang Kami
 						</div>

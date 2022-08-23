@@ -1,20 +1,20 @@
 import React from "react";
 import Contact from "../components/contact/Contact";
-import DetailProduk from "../components/detailproduk/DetailProduk";
 import Footer from "../components/footer/Footer";
+import ListProduk from "../components/listProduk/ListProduk";
 import Whatsapp from "../components/wa/Whatsapp";
 import Header from "../components/header/Header";
 
-const detail_produk = () => {
+const list_produk = () => {
 	return (
-		<div>
-			<div className="bg-gray-100 h-[100%]">
-				<div className="sticky top-0 z-40 bg-white w-full">
+		<>
+			<div className="bg-white relative">
+				<div className="sticky top-0 z-50 bg-white w-full">
 					<Header />
 				</div>
 				<div className="mt-10">
-					<DetailProduk />
-					<div className="mt-20 z-50 -mt[400px] sticky">
+					<ListProduk />
+					<div className="mt-20 md:-mt[400px] sticky">
 						<Whatsapp />
 					</div>
 				</div>
@@ -23,8 +23,8 @@ const detail_produk = () => {
 					<Footer />
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
-export default detail_produk;
+export default list_produk;

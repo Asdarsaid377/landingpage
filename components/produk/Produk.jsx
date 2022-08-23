@@ -20,16 +20,16 @@ const Produk = () => {
 	return (
 		<>
 			<div className="w-[100%] h-auto bg-gray-100">
-				<div className="flex-col flex items-center justify-center" id="Produk">
-					<span className="text-primary text-center text-[40px] mb-[16px] font-bold">
+				<div className="flex-wrap items-center md:flex-col mb-3 w-full flex justify-center">
+					<span className="text-primary text-center text-[40px] mb-3 md:mb-[16px] font-bold">
 						Produk Kami
 					</span>
 					<p>Temukan apa yang kamu butuhkan disini.</p>
 				</div>
-				<div className="flex justify-around items-center mx-[120px] mt-12 gap-8">
+				<div className="flex-wrap md:flex justify-around items-center mx-[105px] md:mx-[120px] md:mt-12 gap-8">
 					{data.map((item) => {
 						return (
-							<div className="flex" key={item.id}>
+							<div className="flex mt-7 md:mt-1" key={item.id}>
 								<Card
 									title={item.categoryName}
 									gambar={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}
