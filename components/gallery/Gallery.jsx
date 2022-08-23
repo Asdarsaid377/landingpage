@@ -30,7 +30,9 @@ const Gallery = () => {
 						<div className="flex flex-wrap flex-grow md:-m-2">
 							{data.map((item) => {
 								return (
-									<div className="flex flex-wrap flex-grow w-1/3">
+									<div
+										key={item._id}
+										className="flex flex-wrap flex-grow w-1/3">
 										<div className="w-full p-1 md:p-2">
 											<img
 												alt="gallery"
