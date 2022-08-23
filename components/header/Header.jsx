@@ -3,7 +3,7 @@ import logo from "./toko.png";
 import Image from "next/image";
 import { close, menu } from "../../assets/images";
 import { BsWhatsapp } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi";
+import Link from "next/link";
 import axios from "axios";
 
 const LandingPage = () => {
@@ -34,7 +34,9 @@ const LandingPage = () => {
 						{/* sisi 1 */}
 						<div className="md:w-1/3 p-3 flex justify-start md:flex md:ml-12 items-center">
 							<span className="md:12 w-[120px] h-[70px] lg:w-24 hover:cursor-pointer">
-								<img src={logos} alt="" />
+								<Link href="/">
+									<img src={logos} alt="" />
+								</Link>
 							</span>
 							<span className="text-black font-bold md:-ml-0 -ml-7">
 								{name}
@@ -104,10 +106,10 @@ const LandingPage = () => {
 										<a href="#Beranda">Beranda</a>
 									</li>
 									<li className="cursor-pointer mt-3 border-white border-b text-[16px]">
-										<a href="#Beranda">Tentang</a>
+										<a href="#Tentang">Tentang</a>
 									</li>
 									<li className="cursor-pointer border-white border-b mt-3 text-[16px]">
-										<a href="#Beranda">Produk</a>
+										<a href="#Produk">Produk</a>
 									</li>
 									<li className="cursor-pointer border-white border-b flex mt-3 text-[16px]">
 										<span className="w-[15px] h-[15px]">
