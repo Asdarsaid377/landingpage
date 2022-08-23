@@ -26,7 +26,7 @@ const Produk = () => {
 					</span>
 					<p>Temukan apa yang kamu butuhkan disini.</p>
 				</div>
-				<div className="flex-wrap md:flex justify-around items-center mx-[105px] md:mx-[120px] md:mt-12 gap-8">
+				<div className="flex-wrap md:flex justify-around items-center px-[10%] md:mx-[120px] md:mt-12 gap-8">
 					{data.map((item) => {
 						return (
 							<div className="flex mt-7 md:mt-1" key={item.id}>

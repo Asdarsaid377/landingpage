@@ -5,8 +5,8 @@ import Image from "next/image";
 const Card = (props) => {
 	return (
 		<>
-			<div className="md:h-[421px] h-[30%] w-[290px]  md:w-[302px] flex-row items-end relative justify-end rounded-[15px] ">
-				<div className="h-[421px]  md:mt-1 w-[290px] md:w-[302px] rounded-[15px]">
+			<div className="md:h-[421px] h-[30%] w-full md:w-[302px] flex-row items-end relative justify-end rounded-[15px] ">
+				<div className="h-[421px] md:mt-1 w-full md:w-[302px] rounded-[15px]">
 					<Image
 						layout="fill"
 						style={{ borderRadius: "15px" }}
@@ -15,7 +15,7 @@ const Card = (props) => {
 					/>
 				</div>
 				<Link href="/list_produk">
-					<button className="px-8 hover:scale-y-110 duration-300 z-30 absolute delay-200 py-2 bg-gray-100 bg-opacity-40 font-semibold text-black rounded-lg mt-[-80px] ml-3">
+					<button className="md:px-8 hover:scale-y-110 duration-300 z-30 absolute delay-200 py-2 bg-gray-100 bg-opacity-40 font-semibold text-black rounded-lg mt-[-80px] ml-3">
 						{props.title}
 					</button>
 				</Link>
