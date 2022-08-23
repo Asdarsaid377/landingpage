@@ -75,7 +75,7 @@ const DetailProduk = () => {
 									</span>
 								</li>
 								{deskripsi === "Deskripsi" && (
-									<div className="h-auto w-[400px] transition-all duration-500 ease-in-out ml-10 justify-between flex delay-150 cursor-pointer">
+									<div className="h-auto md:w-[400px] transition-all duration-500 ease-in-out ml-10 justify-between flex delay-150 cursor-pointer">
 										<div className="text-primary">{desc}</div>
 										<div
 											className="font-bold text-primary cursor-pointer"
@@ -95,7 +95,7 @@ const DetailProduk = () => {
 									<span className="font-bold text-[15px]">Spesifikasi</span>
 								</li>
 								{deskripsi === "Spesifikasi" && (
-									<div className="h-auto w-[400px] ml-10 justify-between flex transition-transform delay-150 duration-500 cursor-pointer">
+									<div className="h-auto md:w-[400px] ml-10 justify-between flex transition-transform delay-150 duration-500 cursor-pointer">
 										<div className="text-primary">{spec}</div>
 										<div
 											className="font-bold text-primary cursor-pointer"
@@ -114,7 +114,7 @@ const DetailProduk = () => {
 									<span className="font-bold text-[15px]">Pilihan Warna</span>
 								</li>
 								{deskripsi === "Pilihan" && (
-									<div className="h-auto w-[400px] ml-10 justify-between flex transition-transform delay-150 duration-500 cursor-pointer">
+									<div className="h-auto md:w-[400px] ml-10 justify-between flex transition-transform delay-150 duration-500 cursor-pointer">
 										<div className="text-primary">{type}</div>
 										<div
 											className="font-bold text-primary cursor-pointer"
@@ -136,7 +136,7 @@ const DetailProduk = () => {
 									</span>
 								</li>
 								{deskripsi === "Sektor" && (
-									<div className="h-auto w-[400px] ml-10 justify-between flex transition-transform delay-150 duration-500 cursor-pointer">
+									<div className="h-auto md:w-[400px] ml-10 justify-between flex transition-transform delay-150 duration-500 cursor-pointer">
 										<div className="text-primary">{user}</div>
 										<div
 											className="font-bold text-primary cursor-pointer"

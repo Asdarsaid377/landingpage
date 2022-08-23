@@ -5,8 +5,8 @@ import Image from "next/image";
 const Card = (props) => {
 	return (
 		<>
-			<div className="md:h-[421px] h-[30%] w-[302px] flex-row items-end relative justify-end rounded-[15px] ">
-				<div className="h-[421px]  md:mt-1 w-[302px] rounded-[15px]">
+			<div className="md:h-[421px] h-[30%] w-[290px]  md:w-[302px] flex-row items-end relative justify-end rounded-[15px] ">
+				<div className="h-[421px]  md:mt-1 w-[290px] md:w-[302px] rounded-[15px]">
 					<Image
 						layout="fill"
 						style={{ borderRadius: "15px" }}
