@@ -4,12 +4,13 @@ import Image from "next/image";
 import axios from "axios";
 import { GrPrevious, GrNext } from "react-icons/gr";
 
-const Review = (props) => {
+const Review = () => {
 	const [name, setName] = useState("");
 	const [testimonial, setTestimonial] = useState("");
 	const [work, setWork] = useState("");
-	const [profil, setprofil] = useState("");
+	const [profil, setprofil] = useState([]);
 	const [index, setIndex] = useState(0);
+	const [data, setData] = useState([]);
 
 	const getData = async () => {
 		const res = await axios.get(
@@ -22,9 +23,8 @@ const Review = (props) => {
 			"https://api-bunka.teknologi-nusantara.com/api" +
 				res.data.data.testimonial[index].imagesUrl
 		);
+		setData(res.data.data.testimonial);
 	};
-
-	console.log(index);
 	useEffect(() => {
 		getData();
 	}, [index]);
@@ -46,13 +46,15 @@ const Review = (props) => {
 						<div className="rounded-full w-full items-center flex justify-center md:gap-48 gap-24 mx-[100px]">
 							<button
 								className="hover:scale-125 shadow-lg rounded-full"
-								onClick={() => setIndex(index <= 0 ? index + 1 : 0)}>
+								onClick={() => setIndex(index === 0 ? index + 1 : 0)}>
 								<GrPrevious />
 							</button>
 							<img alt="" src={profil} className="w-32 rounded-full h-32" />
 							<button
 								className="hover:scale-125 shadow-lg rounded-full"
-								onClick={() => setIndex(index >= 1 ? (index = 0) : index + 1)}>
+								onClick={() =>
+									setIndex(index === data.length - 1 ? (index = 0) : index + 1)
+								}>
 								<GrNext />
 							</button>
 						</div>

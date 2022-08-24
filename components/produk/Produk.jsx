@@ -27,7 +27,7 @@ const Produk = () => {
 				<div className="flex-wrap md:flex justify-start items-center mx-20 md:mx-[100px] md:mt-12 gap-8">
 					{data.map((item) => {
 						return (
-							<div className="flex flex-wrap gap-8 mt-7 md:mt-1" key={item.id}>
+							<div className="flex flex-wrap gap-8 mt-7 md:mt-1" key={item._id}>
 								<Card
 									title={item.categoryName}
 									gambar={`https://api-bunka.teknologi-nusantara.com/api${item.imagesUrl}`}

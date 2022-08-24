@@ -7,7 +7,9 @@ import {
 	service,
 } from "../../assets/icon";
 import axios from "axios";
+import { data } from "autoprefixer";
 
+let count = 0;
 const Hero = () => {
 	const [about, setAbout] = useState("");
 	const [banner, setBanner] = useState("");
