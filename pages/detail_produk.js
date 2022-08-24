@@ -9,14 +9,14 @@ const detail_produk = () => {
 	return (
 		<div>
 			<div className="bg-gray-100 h-[100%]">
+				<div className="z-40 -mt[420px] md:-mt[400px] sticky top-[650px]">
+					<Whatsapp />
+				</div>
 				<div className="sticky top-0 z-40 bg-white w-full">
 					<Header />
 				</div>
 				<div className="mt-10">
 					<DetailProduk />
-					<div className="mt-20 z-50 -mt[400px] sticky">
-						<Whatsapp />
-					</div>
 				</div>
 				<div className="mt-32">
 					<Contact />

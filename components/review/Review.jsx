@@ -43,7 +43,7 @@ const Review = (props) => {
 						Saat-saat memberi mereka pengalaman terbaik
 					</span>
 					<div className="flex flex-col mt-16 items-center">
-						<div className="rounded-full w-full items-center flex justify-center md:gap-48 gap-24 mx-[100px]  ">
+						<div className="rounded-full w-full items-center flex justify-center md:gap-48 gap-24 mx-[100px]">
 							<button
 								className="hover:scale-125 shadow-lg rounded-full"
 								onClick={() => setIndex(index <= 0 ? index + 1 : 0)}>

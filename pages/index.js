@@ -14,25 +14,26 @@ export default function Home({ names }) {
 		<>
 			{/* <LandingPage /> */}
 			<div className="bg-gray-100">
+				<div className="z-40 -mt[420px] md:-mt[400px] sticky top-[650px]">
+					<Whatsapp />
+				</div>
 				<div className="sticky top-0 z-50">
 					<LandingPage />
 				</div>
 				<div id="Beranda">
 					<Hero />
 				</div>
-				<div className="mt-20 z-40 -mt[420px] md:-mt[400px] sticky top-[680px]">
-					<Whatsapp />
-				</div>
+
 				<div className="md:mt-10 mt-2" id="Produk">
 					<Produk />
 				</div>
 				<div className="md:mt-20 mt-10 relative md:flex md:flex-col bg-gray-100">
 					<Review nama={names} />
-					<div className="md:mt-96 md:absolute">
+					<div className="md:mt-[420px] md:absolute">
 						<Gallery />
 					</div>
 				</div>
-				<div className="md:mt-20 mt-12">
+				<div className="md:mt-12 mt-12">
 					<Contact />
 					<Footer />
 				</div>
